@@ -1,0 +1,53 @@
+:root {
+  --completed-tasks: 0;
+  --total-tasks: 7;
+  --radius: 30;
+  --null: 3.5;
+  --circle-size: calc(var(--radius) * 2);
+  --perimeter: calc(2 * var(--radius) * 3.1416);
+  --dash-offset: calc(var(--perimeter) - var(--null) - (var(--completed-tasks) / var(--total-tasks)) * var(--perimeter));
+}
+
+.card__per {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 4px 0 0 0;
+}
+
+.card__per svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card__per circle {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.5);
+  stroke-width: 1;
+  transform: rotate(-90deg);
+  transform-origin: center;
+  stroke-linecap: round; 
+}
+
+.card__per circle.progress {
+  stroke-width: 2;
+  stroke: #fff;
+  stroke-dasharray: var(--perimeter);
+  stroke-dashoffset: var(--dash-offset);
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+@media screen and (max-width:664px) {
+  .card__per{
+    margin: auto;
+  }
+}

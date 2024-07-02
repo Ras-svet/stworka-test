@@ -1,0 +1,19 @@
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+@media screen and (max-width:664px) {
+  .card__info {
+    max-width: 230px;
+    gap:10px
+  }
+}
+
+@media screen and (max-width:494px) {
+  .card__info {
+    max-width: 170px;
+    gap:10px
+  }
+}

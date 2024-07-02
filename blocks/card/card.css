@@ -1,0 +1,24 @@
+.card {
+  margin: 50px 10px;
+  padding: 12px 18px 15px 22px;
+  display: flex;
+  flex-direction: row;
+  background-color: #3579F5;
+  border-radius: 10px;
+  border: none;
+  gap: 68px;
+  justify-content: space-between;
+  max-width: 743px;
+}
+
+@media screen and (max-width: 761px) {
+  .card {
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width:664px) {
+  .card {
+    padding: 6px 12px 9px 16px;
+  }
+}

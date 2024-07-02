@@ -1,0 +1,11 @@
+.card__span {
+  padding: 0 13px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #2364DB;
+  border-radius: 40px;
+  align-self: flex-start;
+}
